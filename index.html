@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Diálogo 02 – Assumindo o Trabalho: Conversa com Colega de Serviço (104 Frases)</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET E BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px 10px;
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- TIPOGRAFIA --- */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #16a085;
+            line-height: 1.3;
+        }
+        
+        h2 { 
+            color: #0e6251; 
+            margin-top: 35px; 
+            margin-bottom: 15px; 
+            font-size: 1.4rem; 
+            border-bottom: 2px solid #e8f8f5; 
+            padding-bottom: 8px;
+            page-break-after: avoid;
+        }
+
+        p { font-size: 1rem; margin-bottom: 10px; color: #444; }
+        .emoji-large { font-size: 1.4rem; }
+
+        /* --- BARRA DE BOTÕES SUPERIOR E INFERIOR (MENU + PDF) --- */
+        .top-actions {
+            display: flex;
+            gap: 12px;
+            margin: 10px 0 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            flex: 1;
+            min-width: 220px;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.1s;
+        }
+        .nav-btn:hover { background-color: #2c3e50; }
+        .nav-btn:active { transform: scale(0.99); }
+
+        .pdf-btn {
+            flex: 1;
+            min-width: 220px;
+            background-color: #c0392b;
+            color: white;
+            text-align: center;
+            padding: 14px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.1s;
+            box-shadow: 0 3px 10px rgba(192, 57, 43, 0.25);
+        }
+        .pdf-btn:hover { background-color: #a93226; }
+        .pdf-btn:active { transform: scale(0.99); }
+
+        /* --- INTRODUÇÃO E CONTROLES --- */
+        .theme-intro {
+            background-color: #e8f8f5;
+            border-left: 5px solid #16a085;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .speaker-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+
+        .pill-br { background-color: #e8f8f5; color: #0e6251; border: 1px solid #a3e4d7; }
+        .pill-us { background-color: #ebf5fb; color: #1f618d; border: 1px solid #85c1e9; }
+
+        /* --- BARRA DE PESQUISA --- */
+        .search-box { margin: 20px 0; }
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid #dcdde1;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #16a085;
+        }
+
+        /* --- CABEÇALHOS DOS ATOS E ÁUDIO --- */
+        .act-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8f8f5;
+        }
+
+        .act-title {
+            color: #0e6251;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .play-act-btn {
+            background-color: #16a085;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .play-act-btn:hover { background-color: #117864; }
+        .play-act-btn.stop { background-color: #e74c3c; }
+
+        .audio-btn-inline {
+            background: #eef6fc;
+            border: 1px solid #cce3f6;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.05rem;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            margin-left: 8px;
+            transition: transform 0.1s, background-color 0.2s;
+        }
+        .audio-btn-inline:hover { background: #16a085; color: #fff; }
+        .audio-btn-inline:active { transform: scale(0.9); }
+
+        /* --- TABELAS DE DIÁLOGO --- */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 28px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 14px;
+            font-size: 0.9rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            font-size: 0.95rem;
+        }
+
+        tr.row-br { background-color: #fafffd; border-left: 4px solid #16a085; }
+        tr.row-us { background-color: #f8fbff; border-left: 4px solid #2980b9; }
+        tr:hover { background-color: #fef9e7; }
+
+        .speaker-tag {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .speaker-br { background-color: #d1f2eb; color: #0e6251; }
+        .speaker-us { background-color: #d6eaf8; color: #1b4f72; }
+
+        .turn-num {
+            font-weight: 800;
+            color: #7f8c8d;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        .sentence-en {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 1.03rem;
+            display: inline;
+        }
+
+        .sentence-en b {
+            color: #c0392b;
+            background-color: #fdedec;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        .ipa-symbol {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #c0392b;
+            font-size: 0.84rem;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .character-portuguese-phonetics {
+            display: block;
+            color: #27ae60;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.87rem;
+            margin-bottom: 5px;
+        }
+
+        .details-translation {
+            display: block;
+            color: #222;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .teacher-tip {
+            display: block;
+            margin-top: 7px;
+            padding-top: 6px;
+            border-top: 1px dashed #cbd5e1;
+            color: #475569;
+            font-size: 0.84rem;
+        }
+
+        .teacher-tip strong { color: #0e6251; }
+
+        /* --- RESPONSIVIDADE MOBILE --- */
+        @media (max-width: 720px) {
+            .container { padding: 15px; }
+            h1 { font-size: 1.45rem; }
+            table { min-width: 100%; }
+            .dialogue-table thead { display: none; }
+            .dialogue-table tr {
+                display: block;
+                border-bottom: 2px solid #e0e0e0;
+                padding: 10px 0;
+            }
+            .dialogue-table td {
+                display: block;
+                width: 100%;
+                border: none;
+                padding: 6px 12px;
+            }
+        }
+
+        /* --- IMPRESSÃO A4 EM PDF --- */
+        @media print {
+            body { background-color: #fff; padding: 0; font-size: 9.5pt; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .top-actions, .audio-btn-inline, .play-act-btn, .search-box { display: none !important; }
+            tr, .theme-intro { page-break-inside: avoid; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- BARRA DE BOTÕES NO TOPO: MENU PRINCIPAL + SALVAR COMO PDF -->
+        <div class="top-actions">
+            <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+            <button class="pdf-btn" onclick="window.print()">🖨️ Salvar como PDF (A4)</button>
+        </div>
+
+        <h1>Diálogo 02 – Assumindo o Trabalho e Passagem de Turno<br><span style="font-size: 0.72em; color: #0e6251;">Conversa Real com Colega de Serviço (104 Frases do Básico ao Avançado)</span> <span class="emoji-large">💼🤝💻</span></h1>
+
+        <div class="theme-intro">
+            <p><strong>Inglês da Vida Real no Ambiente de Trabalho!</strong></p>
+            <p>Nesta aula prática, você vai acompanhar o diálogo completo entre <strong>Lucas (um profissional brasileiro que está chegando para assumir o turno/posto de trabalho)</strong> e <strong>Mark (seu colega americano que está encerrando o turno e passando as instruções do dia)</strong>.</p>
+            <p>A conversa progride naturalmente em <strong>5 Atos (do Básico ao Avançado)</strong>: desde chegar no serviço, bater o ponto (<em>clock in</em>), pegar um café e assumir o posto (<em>take over</em>), até lidar com sistemas travando, impressora sem papel, clientes exigentes, pausa para o almoço, horas extras (<em>overtime</em>), prazos (<em>deadlines</em>) e a despedida no fim do expediente!</p>
+        </div>
+
+        <div class="stats-bar">
+            <div>
+                <span class="speaker-pill pill-br">🇧🇷 Lucas (Assumindo o Turno): 52 Falas</span>
+                <span class="speaker-pill pill-us">🇺🇸 Mark (Colega Americano): 52 Falas</span>
+            </div>
+            <div style="font-size: 0.9rem; color: #555; font-weight: 600;">
+                🎧 Total: <strong>104 Frases com Áudio, IPA, Fonética, Tradução e Dicas do Professor</strong>
+            </div>
+        </div>
+
+        <!-- BARRA DE PESQUISA -->
+        <div class="search-box">
+            <input type="text" id="dialogueSearch" class="search-input" placeholder="🔍 Pesquisar nas 104 frases do trabalho (ex: shift, take over, clock in, boss, deadline, overtime, printer)..." onkeyup="filterDialogue()">
+        </div>
+
+        <!-- CONTAINER DOS 5 ATOS DO DIÁLOGO (104 FALAS) -->
+        <div id="dialogue-container"></div>
+
+        <!-- BARRA DE BOTÕES NO RODAPÉ: MENU PRINCIPAL + SALVAR COMO PDF -->
+        <div class="top-actions" style="margin-top: 30px;">
+            <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+            <button class="pdf-btn" onclick="window.print()">🖨️ Salvar como PDF (A4)</button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================================
+        // BASE COMPLETA: 104 FALAS (52 DO BRASILEIRO LUCAS + 52 DO AMERICANO MARK)
+        // ímpares = BR (Lucas) | pares = US (Mark)
+        // ============================================================================
+        const dialogueActs = [
+            {
+                actId: 1,
+                title: "Ato 1: Chegando no Serviço, Batendo o Ponto e Assumindo o Posto (Nível Básico – Falas #1 a #20)",
+                items: [
+                    [1, "BR", "Good morning, Mark! How is your <b>shift</b> going so far?", "/ɡʊd ˈmɔːrnɪŋ mɑːrk | haʊ ɪz jɔːr ʃɪft ˈɡoʊɪŋ soʊ fɑːr/", "(Gúd mór-nin, Márc! Ráu iz iór xíft gôu-in sôu fár?)", "Bom dia, Mark! Como está indo o seu turno até agora?", "<strong>Vocabulário de Trabalho:</strong> <em>'Shift'</em> significa turno de trabalho (<em>morning shift, night shift</em>)."],
+                    [2, "US", "Morning, Lucas! It's been pretty busy today. I'm glad you're here!", "/ˈmɔːrnɪŋ ˈluːkəs | ɪts bɪn ˈprɪti ˈbɪzi təˈdeɪ | aɪm ɡlæd jʊr hɪr/", "(Mór-nin, Lú-cas! Its bín prí-ti bí-zi tu-dêi. Aim gléd iúr ríher!)", "Bom dia, Lucas! Tem sido bem corrido hoje. Que bom que você chegou!", "<strong>Present Perfect (It's been = It has been):</strong> Usado porque o turno começou antes e continua até agora."],
+                    [3, "BR", "I arrived ten minutes early. Let me just <b>clock in</b> first.", "/aɪ əˈraɪvd ten ˈmɪnɪts ˈɜːrli | let miː dʒʌst klɑːk ɪn fɜːrst/", "(Ai a-ráivd tén mí-nits âr-li. Lét mi djâst clóc in fârst)", "Eu cheguei dez minutos adiantado. Deixa eu só bater o ponto primeiro.", "<strong>Phrasal Verb Essencial:</strong> 'Bater o ponto ao entrar' em inglês é <strong>clock in</strong> (ou <em>punch in</em>)."],
+                    [4, "US", "Sure, go ahead! The time clock by the door is working fine today.", "/ʃʊr ɡoʊ əˈhed | ðə taɪm klɑːk baɪ ðə dɔːr ɪz ˈwɜːrkɪŋ faɪn təˈdeɪ/", "(Xúr, gôu a-réd! Dhu táim clóc bái dhu dór iz uâr-quin fáin tu-dêi)", "Claro, vá em frente! O relógio de ponto perto da porta está funcionando bem hoje.", "<strong>Preposição 'By':</strong> <em>'By the door'</em> significa 'ao lado da porta / perto da porta'."],
+                    [5, "BR", "Oh, wait a second. Where did I put my <b>ID badge</b>?", "/oʊ weɪt ə ˈsekənd | wer dɪd aɪ pʊt maɪ aɪ diː bædʒ/", "(Ôu, uêit a sé-când. Uér did ai pút mai Ái-Díi bédj?)", "Ah, espere um segundo. Onde foi que eu coloquei o meu crachá de identificação?", "<strong>Vocabulário:</strong> Crachá de trabalho ou empresa em inglês chama-se <strong>badge</strong> ou <strong>ID badge</strong>."],
+                    [6, "US", "Check your jacket pocket! I always forget mine in the car.", "/tʃek jɔːr ˈdʒækɪt ˈpɑːkɪt | aɪ ˈɔːlweɪz fərˈɡet maɪn ɪn ðə kɑːr/", "(Tchéc iór djé-quet pó-quet! Ai óu-ueis for-guét máin in dhu cár)", "Verifique o bolso da sua jaqueta! Eu sempre esqueço o meu no carro.", "<strong>Pronome Possessivo:</strong> <em>'Mine'</em> substitui <em>'my badge'</em> (o meu) para não repetir a palavra."],
+                    [7, "BR", "Found it! It was in my backpack. I'll just <b>put on</b> my uniform.", "/faʊnd ɪt | ɪt wəz ɪn maɪ ˈbækpæk | aɪl dʒʌst pʊt ɑːn maɪ ˈjuːnɪfɔːrm/", "(Fáund it! It uóz in mai béc-péc. Áil djâst pút ón mai iú-ni-fórm)", "Achei! Estava na minha mochila. Vou só vestir o meu uniforme.", "<strong>Phrasal Verb:</strong> Para vestir roupas, uniforme ou calçados, usamos sempre <strong>put on</strong>."],
+                    [8, "US", "Take your time. Put your bag in the <b>locker room</b> and grab a cup of coffee.", "/teɪk jɔːr taɪm | pʊt jɔːr bæɡ ɪn ðə ˈlɑːkər ruːm ænd ɡræb ə kʌp əv ˈkɔːfi/", "(Têic iór táim. Pút iór bég in dhu ló-quer rúum énd gréb a câp óv có-fi)", "Sem pressa. Guarde sua bolsa no vestiário/sala de armários e pegue uma xícara de café.", "<strong>Verbo 'Grab':</strong> Na fala cotidiana, <em>'grab a coffee'</em> é muito usado no sentido de 'pegar rapidamente um café'."],
+                    [9, "BR", "Good idea! Did someone <b>make</b> fresh coffee this morning?", "/ɡʊd aɪˈdiːə | dɪd ˈsʌmwʌn meɪk freʃ ˈkɔːfi ðɪs ˈmɔːrnɪŋ/", "(Gúd ai-dí-a! Did sâm-uãn mêic fréx có-fi dhis mór-nin?)", "Boa ideia! Alguém fez café fresco esta manhã?", "<strong>Make vs. Get/Take:</strong> Como é preparar/passar o café na cafeteira, usamos <strong>make coffee</strong>!"],
+                    [10, "US", "Yes, I made a whole pot twenty minutes ago. Help yourself!", "/jes aɪ meɪd ə hoʊl pɑːt ˈtwenti ˈmɪnɪts əˈɡoʊ | help jɔːrˈself/", "(Iés, ai mêid a rôul pót tuên-ti mí-nits a-gôu. Rélp iór-sélf!)", "Sim, eu fiz uma garrafa/jarra inteira vinte minutos atrás. Sirva-se!", "<strong>Expressão de Cortesia:</strong> <em>'Help yourself!'</em> significa <strong>'Sirva-se! / Fique à vontade para pegar!'</strong>"],
+                    [11, "BR", "Thanks, Mark! I really need some caffeine before I <b>start working</b>.", "/θæŋks mɑːrk | aɪ ˈrɪəli niːd sʌm kæˈfiːn bɪˈfɔːr aɪ stɑːrt ˈwɜːrkɪŋ/", "(Thénks, Márc! Ai rí-li níid sâm ké-fíin bi-fór ai stárt uâr-quin)", "Obrigado, Mark! Eu realmente preciso de um pouco de cafeína antes de começar a trabalhar.", "<strong>Pronúncia de 'Caffeine':</strong> A sílaba forte é a última: <em>ké-FÍIN</em> (/kæˈfiːn/)."],
+                    [12, "US", "I hear you! Mondays are always tough after a long weekend.", "/aɪ hɪr juː | ˈmʌndeɪz ɑːr ˈɔːlweɪz tʌf ˈæftər ə lɔːŋ ˈwiːkend/", "(Ai ríher iu! Mân-dêiz ar óu-ueis tâf éf-ter a lóng uí-quend)", "Eu te entendo! Segundas-feiras são sempre difíceis depois de um fim de semana prolongado.", "<strong>Pronúncia de 'Tough':</strong> O 'gh' final tem som de <strong>F</strong>: diga <em>'tâf'</em> (/tʌf/ = difícil/duro). E <em>'I hear you!'</em> = Eu te entendo bem!"],
+                    [13, "BR", "All right, I'm ready! I can <b>take over</b> from here now.", "/ɔːl raɪt aɪm ˈredi | aɪ kæn teɪk ˈoʊvər frʌm hɪr naʊ/", "(Ól ráit, aim ré-di! Ai quén têic ôu-ver frâm ríher náu)", "Tudo certo, estou pronto! Eu já posso assumir o trabalho daqui para frente agora.", "<strong>Revisão da Aula do TAKE:</strong> Veja <em>'I can take over from here'</em> na prática real para assumir o posto do colega!"],
+                    [14, "US", "Awesome! Let me <b>walk you through</b> what happened during my shift.", "/ˈɔːsəm | let miː wɔːk juː θruː wʌt ˈhæpənd ˈdʊrɪŋ maɪ ʃɪft/", "(Ó-sâm! Lét mi uóc iu thrú uót ré-pend dú-rin mai xíft)", "Excelente! Deixa eu te explicar passo a passo o que aconteceu durante o meu turno.", "<strong>Phrasal Verb Corporativo:</strong> <em>'Walk someone through something'</em> = explicar detalhadamente / guiar alguém passo a passo."],
+                    [15, "BR", "Please do! Let me grab a notepad so I can <b>take notes</b>.", "/pliːz duː | let miː ɡræb ə ˈnoʊtpæd soʊ aɪ kæn teɪk noʊts/", "(Plíiz dú! Lét mi gréb a nôut-péd sôu ai quén têic nôuts)", "Por favor! Deixa eu pegar um bloco de papel para que eu possa fazer anotações.", "<strong>Bloco fixo:</strong> 'Fazer anotações / anotar' é sempre <strong>take notes</strong>."],
+                    [16, "US", "You're always so organized, Lucas. That makes the <b>handover</b> much easier.", "/jʊr ˈɔːlweɪz soʊ ˈɔːrɡənaɪzd ˈluːkəs | ðæt meɪks ðə ˈhændoʊvər mʌtʃ ˈiːziər/", "(Iúr óu-ueis sôu ór-ga-náizd, Lú-cas. Dhét mêics dhu rénd-ôu-ver mâtch í-zi-er)", "Você é sempre tão organizado, Lucas. Isso torna a passagem de turno muito mais fácil.", "<strong>Vocabulário de Serviço:</strong> A passagem de turno ou de bastão no trabalho chama-se <strong>handover</strong> (ou <em>shift handover</em>)."],
+                    [17, "BR", "I prefer writing things down so I don't <b>forget</b> anything important.", "/aɪ prɪˈfɜːr ˈraɪtɪŋ θɪŋz daʊn soʊ aɪ doʊnt fərˈɡet ˈeniθɪŋ ɪmˈpɔːrtnt/", "(Ai pri-fâr rái-tin thíngz dáun sôu ai dôunt for-guét ê-ni-thin im-pór-tent)", "Eu prefiro anotar as coisas no papel para não esquecer nada importante.", "<strong>Phrasal Verb:</strong> <em>'Write down'</em> significa anotar no papel para registrar."],
+                    [18, "US", "Smart move! First of all, we had a delivery early this morning.", "/smɑːrt muːv | fɜːrst əv ɔːl wiː hæd ə dɪˈlɪvəri ˈɜːrli ðɪs ˈmɔːrnɪŋ/", "(Smárt múv! Fârst óv ól, uí réd a di-lí-ve-ri âr-li dhis mór-nin)", "Boa jogada (Atitude inteligente)! Primeiramente, nós recebemos uma entrega cedo esta manhã.", "<strong>Expressão natural:</strong> <em>'Smart move!'</em> = Boa decisão! / Mandou bem na escolha!"],
+                    [19, "BR", "Did the supplier <b>bring</b> all the boxes we ordered last week?", "/dɪd ðə səˈplaɪər brɪŋ ɔːl ðə ˈbɑːksɪz wiː ˈɔːrdərd læst wiːk/", "(Did dhu sa-plái-er brín ól dhu bóc-siz uí ór-derd lést uíic?)", "O fornecedor trouxe todas as caixas que nós encomendamos na semana passada?", "<strong>Bring vs. Take:</strong> Como o fornecedor trouxe as caixas até a empresa (para cá), usamos <strong>bring</strong>."],
+                    [20, "US", "Almost all of them. Two boxes are still on backorder until Thursday.", "/ˈɔːlmoʊst ɔːl əv ðem | tuː ˈbɑːksɪz ɑːr stɪl ɑːn ˈbækɔːrdər ənˈtɪl ˈθɜːrzdeɪ/", "(Óu-môust ól óv dhém. Tú bóc-siz ar stíl ón béc-ór-der ân-tíl Thârz-dêi)", "Quase todas elas. Duas caixas ainda estão pendentes de entrega (em falta no estoque) até quinta-feira.", "<strong>Termo comercial:</strong> <em>'On backorder'</em> = pedido pendente que será entregue assim que chegar no estoque."]
+                ]
+            },
+            {
+                actId: 2,
+                title: "Ato 2: Passagem de Turno, Sistema Lento e Problemas Técnicos (Nível Básico-Intermediário – Falas #21 a #40)",
+                items: [
+                    [21, "BR", "Got it! Where did you <b>put</b> the boxes that arrived today?", "/ɡɑːt ɪt | wer dɪd juː pʊt ðə ˈbɑːksɪz ðæt əˈraɪvd təˈdeɪ/", "(Gót it! Uér did iu pút dhu bóc-siz dhét a-ráivd tu-dêi?)", "Entendi! Onde você colocou as caixas que chegaram hoje?", "<strong>Got it:</strong> Forma curta de <em>'I have got it'</em> = Entendi! / Anotado!"],
+                    [22, "US", "I stacked them in the stockroom, right next to the main shelf.", "/aɪ stækt ðem ɪn ðə ˈstɑːkruːm | raɪt nekst tə ðə meɪn ʃelf/", "(Ai stéct dhém in dhu stóc-rúum, ráit nécst tu dhu mêin xélf)", "Eu as empilhei no almoxarifado (estoque), bem ao lado da prateleira principal.", "<strong>Vocabulário:</strong> <em>'Stack'</em> = empilhar; <em>'stockroom'</em> (ou <em>storage room</em>) = sala de estoque / almoxarifado."],
+                    [23, "BR", "Did you already <b>update</b> the inventory in the computer system?", "/dɪd juː ɔːlˈredi ˌʌpˈdeɪt ði ˈɪnvəntɔːri ɪn ðə kəmˈpjuːtər ˈsɪstəm/", "(Did iu óu-ré-di âp-dêit dhi ín-ven-tó-ri in dhu com-piú-ter sís-tem?)", "Você já atualizou o inventário (estoque) no sistema do computador?", "<strong>Ordem de 'Already':</strong> Em perguntas, <em>already</em> (já) entra logo depois do sujeito (<em>Did you already...</em>)."],
+                    [24, "US", "I tried to, but the system has been <b>acting up</b> all morning.", "/aɪ traɪd tuː | bʌt ðə ˈsɪstəm hæz bɪn ˈæktɪŋ ʌp ɔːl ˈmɔːrnɪŋ/", "(Ai tráid tú, bât dhu sís-tem réz bín éc-tin âp ól mór-nin)", "Eu tentei, mas o sistema está dando problema (aprontando/falhando) a manhã toda.", "<strong>Phrasal Verb de Ouro:</strong> Quando uma máquina, carro ou sistema está falhando/dando defeito, dizemos que está <strong>acting up</strong>!"],
+                    [25, "BR", "Again? Is the software <b>freezing</b> or is the internet connection slow?", "/əˈɡen | ɪz ðə ˈsɔːftwer ˈfriːzɪŋ ɔːr ɪz ði ˈɪntərnet kəˈnekʃn sloʊ/", "(A-guén? Iz dhu sóft-uér fríi-zin ór iz dhi ín-ter-nét co-néc-xãn slôu?)", "De novo? O programa está travando (congelando) ou a conexão da internet está lenta?", "<strong>Vocabulário de TI:</strong> Quando a tela ou programa trava no computador/celular, dizemos que <strong>it is freezing</strong> (congelando)."],
+                    [26, "US", "Both! It crashed twice while I was entering the invoice numbers.", "/boʊθ | ɪt kræʃt twaɪs waɪl aɪ wəz ˈentərɪŋ ði ˈɪnvɔɪs ˈnʌmbərz/", "(Bôuth! It créxt tuáis uáil ai uóz ên-te-rin dhi ín-vóis nâm-bers)", "Os dois! Ele fechou sozinho (deu pane) duas vezes enquanto eu estava digitando os números das notas fiscais.", "<strong>Vocabulário:</strong> <em>'Crash'</em> para sistemas = travar totalmente/fechar sozinho; <em>'Invoice'</em> = nota fiscal / fatura comercial."],
+                    [27, "BR", "Did you <b>call</b> the IT support desk to report the issue?", "/dɪd juː kɔːl ði aɪ tiː səˈpɔːrt desk tə rɪˈpɔːrt ði ˈɪʃuː/", "(Did iu cól dhi Ái-Tíi sa-pórt désk tu ri-pórt dhi í-xu?)", "Você ligou para o suporte de TI para relatar o problema?", "<strong>Pronúncia de 'Issue':</strong> Significa 'problema / questão' e pronuncia-se <strong>/ˈɪʃuː/ ('í-xu')</strong>."],
+                    [28, "US", "Yeah, I opened a ticket. They said they're rebooting the main server right now.", "/jeə aɪ ˈoʊpənd ə ˈtɪkɪt | ðeɪ sed ðer ˌriːˈbuːtɪŋ ðə meɪn ˈsɜːrvər raɪt naʊ/", "(Ié, ai ôu-pend a tí-quet. Dhêi séd dhér ri-bú-tin dhu mêin sâr-ver ráit náu)", "Sim, eu abri um chamado. Eles disseram que estão reiniciando o servidor principal agora mesmo.", "<strong>Vocabulário Técnico:</strong> <em>'Open a ticket'</em> = abrir um chamado de suporte; <em>'reboot / restart'</em> = reiniciar."],
+                    [29, "BR", "Let me <b>log in</b> with my username and see if it's faster now.", "/let miː lɔːɡ ɪn wɪθ maɪ ˈjuːzərneɪm ænd siː ɪf ɪts ˈfæstər naʊ/", "(Lét mi lóg in uídh mai iú-zer-nêim énd síi if its fés-ter náu)", "Deixa eu fazer login (entrar no sistema) com meu usuário e ver se está mais rápido agora.", "<strong>Phrasal Verbs de Sistema:</strong> <strong>Log in / Sign in</strong> = entrar com senha; <strong>Log out / Sign out</strong> = sair do sistema."],
+                    [30, "US", "Oh, look at that! It loaded right away. Looks like they fixed it!", "/oʊ lʊk æt ðæt | ɪt ˈloʊdɪd raɪt əˈweɪ | lʊks laɪk ðeɪ fɪkst ɪt/", "(Ôu, lúc ét dhét! It lôu-ded ráit a-uêi. Lúcs láic dhêi fícst it!)", "Ah, olhe só aquilo! Carregou imediatamente. Parece que eles consertaram!", "<strong>Expressão de Tempo:</strong> <em>'Right away'</em> (ou <em>straight away</em>) significa <strong>'imediatamente / na mesma hora'</strong>."],
+                    [31, "BR", "Thank goodness! I'll finish entering those invoices as soon as we finish talking.", "/θæŋk ˈɡʊdnəs | aɪl ˈfɪnɪʃ ˈentərɪŋ ðoʊz ˈɪnvɔɪsɪz æz suːn æz wiː ˈfɪnɪʃ ˈtɔːkɪŋ/", "(Thénk gúd-nes! Áil fí-nix ên-te-rin dhôuz ín-vói-siz éz súun éz uí fí-nix tó-quin)", "Graças a Deus (Ainda bem)! Vou terminar de lançar essas notas fiscais assim que terminarmos de conversar.", "<strong>Regra Gramatical:</strong> O verbo <strong>finish</strong> exige sempre que o verbo seguinte venha com <strong>-ING</strong> (<em>finish entering, finish talking</em>)!"],
+                    [32, "US", "Great! Also, heads up: the office printer is <b>out of</b> black toner.", "/ɡreɪt | ˈɔːlsoʊ hedz ʌp | ði ˈɔːfɪs ˈprɪntər ɪz aʊt əv blæk ˈtoʊnər/", "(Grêit! Óu-sôu, rédz âp: dhi ó-fis prín-ter iz áut óv bléc tôu-ner)", "Ótimo! Ah, um aviso rápido: a impressora do escritório está sem toner preto.", "<strong>Expressão muito usada:</strong> <em>'Heads up!'</em> = Fique atento / Só um aviso rápido! E <em>'out of'</em> = sem estoque / acabou."],
+                    [33, "BR", "Did we <b>run out of</b> toner cartridges in the supply cabinet too?", "/dɪd wiː rʌn aʊt əv ˈtoʊnər ˈkɑːrtrɪdʒɪz ɪn ðə səˈplaɪ ˈkæbɪnət tuː/", "(Did uí rân áut óv tôu-ner cár-tri-djiz in dhu sa-plái ké-bi-net tú?)", "Acabaram os cartuchos de toner no armário de suprimentos também?", "<strong>Phrasal Verb Indispensável:</strong> <strong>Run out of something</strong> significa 'ficar sem / acabar o estoque de algo'."],
+                    [34, "US", "No, there's one new cartridge left on the top shelf, but the paper tray jammed earlier.", "/noʊ ðerz wʌn nuː ˈkɑːrtrɪdʒ left ɑːn ðə tɑːp ʃelf | bʌt ðə ˈpeɪpər treɪ dʒæmd ˈɜːrliər/", "(Nôu, dhérz uãn nú cár-tridj léft ón dhu tóp xélf, bât dhu pêi-per trêi djémd âr-li-er)", "Não, ainda resta um cartucho novo na prateleira de cima, mas a bandeja de papel enroscou mais cedo.", "<strong>Vocabulário de Escritório:</strong> <em>'Paper jam'</em> = papel enroscado/atolado na impressora (igual a <em>traffic jam</em> no trânsito!)."],
+                    [35, "BR", "No problem, I know how to replace the cartridge and clear the paper jam.", "/noʊ ˈprɑːbləm | aɪ noʊ haʊ tə rɪˈpleɪs ðə ˈkɑːrtrɪdʒ ænd klɪr ðə ˈpeɪpər dʒæm/", "(Nôu pró-blem, ai nôu ráu tu ri-plêis dhu cár-tridj énd clíer dhu pêi-per djém)", "Sem problema, eu sei como substituir o cartucho e tirar o papel enroscado.", "<strong>Estrutura 'Know how to':</strong> Para dizer 'eu sei fazer algo', em inglês usamos sempre <strong>know how to + verbo</strong>."],
+                    [36, "US", "You're a lifesaver! Moving on, there are three urgent emails flagged in the inbox.", "/jʊr ə ˈlaɪfseɪvər | ˈmuːvɪŋ ɑːn ðer ɑːr θriː ˈɜːrdʒənt ˈiːmeɪlz flæɡd ɪn ði ˈɪnbɑːks/", "(Iúr a láif-sêi-ver! Mú-vin ón, dhér ar thríi âr-djent í-meilz flégd in dhi ín-bócs)", "Você me salvou (é um salva-vidas)! Passando adiante, há três e-mails urgentes marcados na caixa de entrada.", "<strong>Elogio no Trabalho:</strong> Dizer <em>'You're a lifesaver!'</em> para um colega significa 'Você me salvou! / Quebrou meu galho!'."],
+                    [37, "BR", "Which one should I <b>prioritize</b> first?", "/wɪtʃ wʌn ʃʊd aɪ praɪˈɔːrətaɪz fɜːrst/", "(Uítch uãn xúd ai prai-ó-ra-táiz fârst?)", "Qual deles eu devo priorizar primeiro?", "<strong>Verbo de Gestão:</strong> <em>'Prioritize'</em> (/praɪˈɔːrətaɪz/) = dar prioridade a / priorizar."],
+                    [38, "US", "Definitely the one from Mr. Henderson. He wants a quote for a bulk order.", "/ˈdefɪnətli ðə wʌn frʌm ˈmɪstər ˈhendərsən | hiː wɑːnts ə kwoʊt fɔːr ə bʌlk ˈɔːrdər/", "(Dé-fi-net-li dhu uãn frâm Mís-ter Rên-der-sãn. Ríi uónts a quôut fór a bâlc ór-der)", "Com certeza o do Sr. Henderson. Ele quer um orçamento (cotação) para um pedido em grande quantidade (atacado).", "<strong>Vocabulário Comercial:</strong> <em>'Quote'</em> = orçamento/cotação de preço; <em>'Bulk order'</em> = pedido em grande volume/atacado."],
+                    [39, "BR", "Did you already calculate the discount, or do I need to <b>figure it out</b>?", "/dɪd juː ɔːlˈredi ˈkælkjuleɪt ðə ˈdɪskaʊnt | ɔːr duː aɪ niːd tə ˈfɪɡjər ɪt aʊt/", "(Did iu óu-ré-di quél-quiu-lêit dhu dís-cáunt, ór du ai níid tu fí-guer it áut?)", "Você já calculou o desconto, ou eu preciso descobrir/calcular isso?", "<strong>Phrasal Verb Campeão:</strong> <strong>Figure out</strong> significa descobrir, calcular ou achar a solução para um problema."],
+                    [40, "US", "I left the spreadsheet open on the desktop with all the numbers ready for you.", "/aɪ left ðə ˈspredʃiːt ˈoʊpən ɑːn ðə ˈdesktɑːp wɪθ ɔːl ðə ˈnʌmbərz ˈredi fɔːr juː/", "(Ai léft dhu spréd-xíit ôu-pen ón dhu désk-tóp uídh ól dhu nâm-bers ré-di fór iu)", "Eu deixei a planilha aberta na área de trabalho com todos os números prontos para você.", "<strong>Termo de Escritório:</strong> Planilha (como do Excel) em inglês chama-se <strong>spreadsheet</strong>."]
+                ]
+            },
+            {
+                actId: 3,
+                title: "Ato 3: Chefia, Reuniões, Clientes Exigentes e Horário de Almoço (Nível Intermediário – Falas #41 a #62)",
+                items: [
+                    [41, "BR", "That saves me a lot of time! By the way, is our manager in the office today?", "/ðæt seɪvz miː ə lɑːt əv taɪm | baɪ ðə weɪ ɪz ˈaʊər ˈmænɪdʒər ɪn ði ˈɔːfɪs təˈdeɪ/", "(Dhét sêivz mi a lót óv táim! Bái dhu uêi, iz áu-er mé-ni-djer in dhi ó-fis tu-dêi?)", "Isso me economiza muito tempo! Aliás, o nosso gerente está no escritório hoje?", "<strong>Verbo 'Save':</strong> Além de salvar, <em>save</em> significa 'economizar / poupar' tempo ou dinheiro (<em>save time, save money</em>)."],
+                    [42, "US", "Yes, Sarah is in her office, but she's <b>in a meeting</b> with the board right now.", "/jes ˈserə ɪz ɪn hɜːr ˈɔːfɪs | bʌt ʃiːz ɪn ə ˈmiːtɪŋ wɪθ ðə bɔːrd raɪt naʊ/", "(Iés, Sé-ra iz in râr ó-fis, bât xíiz in a míi-tin uídh dhu bórd ráit náu)", "Sim, a Sarah está na sala dela, mas está em reunião com a diretoria (conselho) agora mesmo.", "<strong>Vocabulário Corporativo:</strong> <em>'The board (of directors)'</em> = o conselho / a alta diretoria da empresa."],
+                    [43, "BR", "Did she mention if we are going to have our weekly <b>team briefing</b> this afternoon?", "/dɪd ʃiː ˈmenʃn ɪf wiː ɑːr ˈɡoʊɪŋ tə hæv ˈaʊər ˈwiːkli tiːm ˈbriːfɪŋ ðɪs ˌæftərˈnuːn/", "(Did xíi mên-xãn if uí ar gôu-in tu rév áu-er uíic-li tíim bríi-fin dhis éf-ter-núun?)", "Ela mencionou se nós vamos ter a nossa reunião rápida semanal de alinhamento hoje à tarde?", "<strong>Vocabulário:</strong> <em>'Briefing'</em> = reunião rápida para passar instruções e alinhar a equipe."],
+                    [44, "US", "It was <b>postponed</b> until 3 PM because she had to deal with a picky client.", "/ɪt wəz poʊstˈpoʊnd ənˈtɪl θriː piː em bɪˈkɔːz ʃiː hæd tə diːl wɪθ ə ˈpɪki ˈklaɪənt/", "(It uóz pôust-pôund ân-tíl thríi píi-ém bi-cóz xíi réd tu díil uídh a pí-qui clái-ent)", "Foi adiada para as 15h porque ela teve que lidar com um cliente exigente/enjoado.", "<strong>Sinônimo Phrasal Verb:</strong> <em>'Postpone'</em> (adiar) no inglês falado também é muito dito como <strong>put off</strong>. E <em>'picky'</em> = exigente demais/chato."],
+                    [45, "BR", "Let me guess: was it Mrs. Robinson complaining about the delivery schedule again?", "/let miː ɡes | wəz ɪt ˈmɪsɪz ˈrɑːbɪnsən kəmˈpleɪnɪŋ əˈbaʊt ðə dɪˈlɪvəri ˈskedʒuːl əˈɡen/", "(Lét mi gués: uóz it Mí-siz Ró-bin-sãn com-plêi-nin a-báut dhu di-lí-ve-ri ské-djul a-guén?)", "Deixe-me adivinhar: foi a Sra. Robinson reclamando do cronograma de entrega de novo?", "<strong>Pronúncia de 'Mrs.':</strong> Para mulheres casadas, a abreviação <em>Mrs.</em> pronuncia-se <strong>/ˈmɪsɪz/ ('Mí-siz')</strong>!"],
+                    [46, "US", "Bingo! She called three times demanding to speak to the supervisor immediately.", "/ˈbɪŋɡoʊ | ʃiː kɔːld θriː taɪmz dɪˈmændɪŋ tə spiːk tə ðə ˈsuːpərvaɪzər ɪˈmiːdiətli/", "(Bín-gôu! Xíi cóld thríi táimz di-mén-din tu spíic tu dhu sú-per-vái-zor i-míi-di-at-li)", "Bingo (Acertou na mosca)! Ela ligou três vezes exigindo falar com o supervisor imediatamente.", "<strong>Falso Amigo Sutil:</strong> <em>'Demand'</em> em inglês é muito forte (exigir com autoridade); não use como sinônimo leve de 'pedir'!"],
+                    [47, "BR", "If she calls back during my shift, how should I <b>handle</b> the situation?", "/ɪf ʃiː kɔːlz bæk ˈdʊrɪŋ maɪ ʃɪft | haʊ ʃʊd aɪ ˈhændl ðə ˌsɪtʃuˈeɪʃn/", "(If xíi cólz béc dú-rin mai xíft, ráu xúd ai rén-dôl dhu sí-tchu-êi-xãn?)", "Se ela ligar de volta durante o meu turno, como eu devo conduzir (lidar com) a situação?", "<strong>Verbo Profissional:</strong> <strong>Handle</strong> é excelente no trabalho para dizer 'lidar com / conduzir / dar conta de' um cliente ou tarefa."],
+                    [48, "US", "Just assure her that her order has already been shipped and give her the tracking number.", "/dʒʌst əˈʃʊr hɜːr ðæt hɜːr ˈɔːrdər hæz ɔːlˈredi bɪn ʃɪpt ænd ɡɪv hɜːr ðə ˈtrækɪŋ ˈnʌmbər/", "(Djâst a-xúr râr dhét râr ór-der réz óu-ré-di bín xípt énd guív râr dhu tré-quin nâm-ber)", "Apenas garanta a ela que o pedido dela já foi despachado (enviado) e dê a ela o código de rastreamento.", "<strong>Voz Passiva no Present Perfect:</strong> <em>'Has been shipped'</em> = foi enviado/despachado. <em>'Tracking number'</em> = código de rastreio."],
+                    [49, "BR", "Where can I <b>find</b> that tracking number if she asks for it?", "/wer kæn aɪ faɪnd ðæt ˈtrækɪŋ ˈnʌmbər ɪf ʃiː æsks fɔːr ɪt/", "(Uér quén ai fáind dhét tré-quin nâm-ber if xíi éscs fór it?)", "Onde eu posso encontrar esse código de rastreamento se ela pedir?", "<strong>Preposição com Ask:</strong> Pedir alguma coisa é sempre <strong>ask FOR something</strong>."],
+                    [50, "US", "I pinned a sticky note with the code right on the monitor frame.", "/aɪ pɪnd ə ˈstɪki noʊt wɪθ ðə koʊd raɪt ɑːn ðə ˈmɑːnɪtər freɪm/", "(Ai pínd a stí-qui nôut uídh dhu côud ráit ón dhu mó-ni-tor frêim)", "Eu colei um post-it (adesivo de recado) com o código bem na borda do monitor.", "<strong>Vocabulário de Escritório:</strong> O famoso bloquinho adesivo (Post-it) no dia a dia é chamado de <strong>sticky note</strong>."],
+                    [51, "BR", "Oh, I see it right here! You really <b>thought of</b> everything, Mark.", "/oʊ aɪ siː ɪt raɪt hɪr | juː ˈrɪəli θɔːt əv ˈevriθɪŋ mɑːrk/", "(Ôu, ai síi it ráit ríher! Iu rí-li thót óv é-vri-thin, Márc)", "Ah, estou vendo bem aqui! Você realmente pensou em tudo, Mark.", "<strong>Passado de Think:</strong> <em>Think -> Thought</em> (/θɔːt/). 'Pensar em algo' usa a preposição <em>of</em> ou <em>about</em>."],
+                    [52, "US", "I try my best! I know how stressful it is to take over a messy shift.", "/aɪ traɪ maɪ best | aɪ noʊ haʊ ˈstresfl ɪt ɪz tə teɪk ˈoʊvər ə ˈmesi ʃɪft/", "(Ai trái mai bést! Ai nôu ráu strés-fôl it iz tu têic ôu-ver a mé-si xíft)", "Eu faço o meu melhor! Sei o quanto é estressante assumir um turno bagunçado.", "<strong>Adjetivo útil:</strong> <em>'Mess'</em> é bagunça (substantivo); <em>'Messy'</em> é bagunçado/desorganizado (adjetivo)."],
+                    [53, "BR", "Speaking of which, who is going to <b>cover for me</b> when I take my lunch break?", "/ˈspiːkɪŋ əv wɪtʃ | huː ɪz ˈɡoʊɪŋ tə ˈkʌvər fɔːr miː wen aɪ teɪk maɪ lʌntʃ breɪk/", "(Spíi-quin óv uítch, rú iz gôu-in tu câ-ver fór mi uén ai têic mai lântch brêic?)", "Falando nisso, quem vai me cobrir quando eu tirar meu horário de almoço?", "<strong>Expressão de Trabalho:</strong> 'Cobrir um colega no posto' diz-se sempre <strong>cover FOR someone</strong>!"],
+                    [54, "US", "Jessica from the next desk said she can cover for you between 1 PM and 2 PM.", "/ˈdʒesɪkə frʌm ðə nekst desk sed ʃiː kæn ˈkʌvər fɔːr juː bɪˈtwiːn wʌn piː em ænd tuː piː em/", "(Djé-si-ca frâm dhu nécst désk séd xíi quén câ-ver fór iu bi-tuíin uãn píi-ém énd tú píi-ém)", "A Jessica da mesa ao lado disse que pode cobrir você entre 13h e 14h.", "<strong>Preposição 'Between':</strong> Usada para intervalos entre dois pontos (<em>between 1 PM and 2 PM</em>)."],
+                    [55, "BR", "Perfect! Did you <b>bring</b> lunch from home today, or are you eating out?", "/ˈpɜːrfɪkt | dɪd juː brɪŋ lʌntʃ frʌm hoʊm təˈdeɪ | ɔːr ɑːr juː ˈiːtɪŋ aʊt/", "(Pâr-fect! Did iu brín lântch frâm rôum tu-dêi, ór ar iu íi-tin áut?)", "Perfeito! Você trouxe almoço de casa hoje, ou vai comer fora?", "<strong>Phrasal Verb:</strong> <em>'Eat out'</em> significa comer fora (em restaurante/lanchonete) em vez de comer em casa."],
+                    [56, "US", "Since my shift ends now at noon, I'm going to grab a burger on my way home.", "/sɪns maɪ ʃɪft endz naʊ æt nuːn | aɪm ˈɡoʊɪŋ tə ɡræb ə ˈbɜːrɡər ɑːn maɪ weɪ hoʊm/", "(Síns mai xíft êndz náu ét núun, aim gôu-in tu gréb a bâr-guer ón mai uêi rôum)", "Já que o meu turno termina agora ao meio-dia, vou pegar um hambúrguer no meu caminho para casa.", "<strong>Bloco de Deslocamento:</strong> <em>'On my way home'</em> = no meu caminho para casa (nunca use <em>to</em> antes de <em>home</em>!)."],
+                    [57, "BR", "Lucky you! I brought some homemade lasagna to heat up in the <b>breakroom</b>.", "/ˈlʌki juː | aɪ brɔːt sʌm ˌhoʊmˈmeɪd ləˈzænjə tə hiːt ʌp ɪn ðə ˈbreɪkruːm/", "(Lâ-qui iu! Ai brót sâm rôum-mêid la-zén-ia tu ríit âp in dhu brêic-rúum)", "Sorte a sua! Eu trouxe uma lasanha caseira para esquentar na copa (sala de descanso).", "<strong>Vocabulário de Empresa:</strong> A copa/cozinha onde os funcionários almoçam e descansam chama-se <strong>breakroom</strong>. <em>'Heat up'</em> = esquentar a comida."],
+                    [58, "US", "Oh, homemade lasagna sounds delicious! Just watch out for the old microwave.", "/oʊ ˌhoʊmˈmeɪd ləˈzænjə saʊndz dɪˈlɪʃəs | dʒʌst wɑːtʃ aʊt fɔːr ði oʊld ˈmaɪkrəweɪv/", "(Ôu, rôum-mêid la-zén-ia sáundz di-lí-xâs! Djâst uótch áut fór dhi ôuld mái-cro-uêiv)", "Ah, lasanha caseira parece deliciosa! Só tome cuidado com o micro-ondas velho.", "<strong>Verbos dos Sentidos:</strong> Quando algo 'parece bom' pelo que você ouviu, diga <strong>sounds good / sounds delicious</strong>!"],
+                    [59, "BR", "Why? Is the microwave in the breakroom <b>broken</b>?", "/waɪ | ɪz ðə ˈmaɪkrəweɪv ɪn ðə ˈbreɪkruːm ˈbroʊkən/", "(Uái? Iz dhu mái-cro-uêiv in dhu brêic-rúum brôu-cãn?)", "Por quê? O micro-ondas da copa está quebrado?", "<strong>Particípio como Adjetivo:</strong> <em>Break -> Broke -> Broken</em> (quebrado / com defeito)."],
+                    [60, "US", "Not broken, just super slow! Use the new one on the left counter instead.", "/nɑːt ˈbroʊkən dʒʌst ˈsuːpər sloʊ | juːz ðə nuː wʌn ɑːn ðə left ˈkaʊntər ɪnˈsted/", "(Nót brôu-cãn, djâst sú-per slôu! Iúz dhu nú uãn ón dhu léft cáun-ter ins-téd)", "Não está quebrado, só é super lento! Use o novo no balcão da esquerda em vez dele.", "<strong>Uso de 'Instead' no final:</strong> Quando vai no fim da frase (sem <em>of</em>), significa 'em vez disso / no lugar dele'."],
+                    [61, "BR", "Good to know! Nobody wants to spend half their lunch break waiting for food to warm up.", "/ɡʊd tə noʊ | ˈnoʊbɑːdi wɑːnts tə spend hæf ðer lʌntʃ breɪk ˈweɪtɪŋ fɔːr fuːd tə wɔːrm ʌp/", "(Gúd tu nôu! Nôu-bó-di uónts tu spênd réf dhér lântch brêic uêi-tin fór fúud tu uórm âp)", "Bom saber! Ninguém quer gastar metade do intervalo de almoço esperando a comida esquentar.", "<strong>Spend vs. Take:</strong> A atividade <em>takes time</em> (leva tempo), mas a pessoa <strong>spends time + verbo-ING</strong> (gasta/passa tempo fazendo algo)."],
+                    [62, "US", "Exactly! Every minute of that one-hour break counts when the day is hectic.", "/ɪɡˈzæktli | ˈevri ˈmɪnɪt əv ðæt wʌn ˈaʊər breɪk kaʊnts wen ðə deɪ ɪz ˈhektɪk/", "(Ig-zéct-li! É-vri mí-nit óv dhét uãn-áu-er brêic cáunts uén dhu dêi iz réc-tic)", "Exatamente! Cada minuto daquela pausa de uma hora conta quando o dia está agitado/frenético.", "<strong>Adjetivo Avançado:</strong> <em>'Hectic'</em> significa 'agitado / caótico / super corrido'."]
+                ]
+            },
+            {
+                actId: 4,
+                title: "Ato 4: Prazos, Horas Extras e Cultura de Trabalho (Nível Intermediário-Avançado – Falas #63 a #84)",
+                items: [
+                    [63, "BR", "By the way, Mark, are you going to work <b>overtime</b> this Friday?", "/baɪ ðə weɪ mɑːrk | ɑːr juː ˈɡoʊɪŋ tə wɜːrk ˈoʊvərtaɪm ðɪs ˈfraɪdeɪ/", "(Bái dhu uêi, Márc, ar iu gôu-in tu uârk ôu-ver-táim dhis Frái-dêi?)", "A propósito, Mark, você vai fazer hora extra nesta sexta-feira?", "<strong>Vocabulário de Trabalho:</strong> 'Fazer hora extra' em inglês é <strong>work overtime</strong> (ou <em>do overtime</em>)."],
+                    [64, "US", "I might have to. We have a tight <b>deadline</b> to close the monthly report.", "/aɪ maɪt hæv tuː | wiː hæv ə taɪt ˈdedlaɪn tə kloʊz ðə ˈmʌnθli rɪˈpɔːrt/", "(Ai máit rév tú. Uí rév a táit déd-láin tu clôuz dhu mânth-li ri-pórt)", "Pode ser que eu tenha que fazer. Nós temos um prazo apertado para fechar o relatório mensal.", "<strong>Collocation de Ouro:</strong> <em>'A tight deadline'</em> = um prazo curto/apertado."],
+                    [65, "BR", "If you need a hand, I can stay a couple of extra hours on Friday to <b>help you out</b>.", "/ɪf juː niːd ə hænd | aɪ kæn steɪ ə ˈkʌpl əv ˈekstrə ˈaʊərz ɑːn ˈfraɪdeɪ tə help juː aʊt/", "(If iu níid a rénd, ai quén stêi a câ-pôl óv écs-tra áu-ers ón Frái-dêi tu rélp iu áut)", "Se você precisar de uma mãozinha (ajuda), posso ficar umas duas horas extras na sexta para te ajudar.", "<strong>Idiom & Phrasal Verb:</strong> <em>'Need a hand'</em> = precisar de ajuda; <em>'Help someone out'</em> = socorrer/ajudar alguém numa tarefa difícil."],
+                    [66, "US", "Are you sure? That would take a huge weight off my shoulders!", "/ɑːr juː ʃʊr | ðæt wʊd teɪk ə hjuːdʒ weɪt ɔːf maɪ ˈʃoʊldərz/", "(Ar iu xúr? Dhét uúd têic a riúdj uêit óf mai xôul-ders!)", "Tem certeza? Isso tiraria um peso enorme das minhas costas (dos meus ombros)!", "<strong>Expressão Idiomática:</strong> Em inglês, tira-se um peso 'dos ombros': <strong>take a weight off my shoulders</strong>."],
+                    [67, "BR", "Of course! Teamwork makes the dream work, right? Plus, the <b>extra pay</b> is always welcome.", "/əv kɔːrs | ˈtiːmwɜːrk meɪks ðə driːm wɜːrk raɪt | plʌs ði ˈekstrə peɪ ɪz ˈɔːlweɪz ˈwelkəm/", "(Óv córs! Tíim-uârk mêics dhu dríim uârk, ráit? Plâs, dhi écs-tra pêi iz óu-ueis uél-câm)", "Claro! O trabalho em equipe faz o sonho funcionar, né? Além disso, o pagamento extra é sempre bem-vindo.", "<strong>Frase Famosa:</strong> <em>'Teamwork makes the dream work'</em> é um ditado corporativo super comum nos EUA."],
+                    [68, "US", "You bet! Overtime pays time and a half, so it really boosts the <b>paycheck</b>.", "/juː bet | ˈoʊvərtaɪm peɪz taɪm ænd ə hæf | soʊ ɪt ˈrɪəli buːsts ðə ˈpeɪtʃek/", "(Iu bét! Ôu-ver-táim pêiz táim énd a réf, sôu it rí-li bústs dhu pêi-tchéc)", "Pode apostar (Com certeza)! A hora extra paga 50% a mais, então realmente dá um gás no contracheque/salário.", "<strong>Cultura de Trabalho nos EUA:</strong> <em>'Time and a half'</em> = hora extra paga com acréscimo de 50% (1,5x). <em>'Paycheck'</em> = pagamento/salário."],
+                    [69, "BR", "In Brazil, we usually get paid <b>once a month</b>, whereas here we get paid every two weeks.", "/ɪn brəˈzɪl wiː ˈjuːʒuəli ɡet peɪd wʌns ə mʌnθ | ˌwerˈæz hɪr wiː ɡet peɪd ˈevri tuː wiːks/", "(In Bra-zíl, uí iú-ju-a-li guét pêid uâns a mânth, uér-éz ríher uí guét pêid é-vri tú uíics)", "No Brasil, nós geralmente recebemos o salário uma vez por mês, ao passo que aqui recebemos a cada duas semanas.", "<strong>Revisão na Prática:</strong> Veja <em>'get paid'</em> (ser pago / receber salário) e o conectivo <em>'whereas'</em> (ao passo que)."],
+                    [70, "US", "Biweekly paychecks are great because you never feel broke at the end of the month!", "/baɪˈwiːkli ˈpeɪtʃeks ɑːr ɡreɪt bɪˈkɔːz juː ˈnevər fiːl broʊk æt ði end əv ðə mʌnθ/", "(Bai-uíic-li pêi-tchécs ar grêit bi-cóz iu né-ver fíil brôuc ét dhi ênd óv dhu mânth!)", "Pagamentos quinzenais são ótimos porque você nunca se sente liso (sem dinheiro) no fim do mês!", "<strong>Gíria muito comum:</strong> <em>'Broke'</em> como adjetivo (<em>I am broke / feel broke</em>) significa <strong>'sem dinheiro / duro / liso'</strong>."],
+                    [71, "BR", "Haha, that's a huge advantage! Another thing I like here is how <b>straightforward</b> people are in meetings.", "/hɑːhɑː ðæts ə hjuːdʒ ədˈvæntɪdʒ | əˈnʌðər θɪŋ aɪ laɪk hɪr ɪz haʊ ˌstreɪtˈfɔːrwərd ˈpiːpl ɑːr ɪn ˈmiːtɪŋz/", "(Rá-rá, dhéts a riúdj ad-vén-tedj! A-nó-dher thín ai láic ríher iz ráu strêit-fór-uârd píi-pôl ar in míi-tinz)", "Haha, essa é uma grande vantagem! Outra coisa de que gosto aqui é o quão diretas/objetivas as pessoas são nas reuniões.", "<strong>Vocabulário de Ouro:</strong> <em>'Straightforward'</em> significa 'direto ao ponto, objetivo, sem rodeios'."],
+                    [72, "US", "Did it feel strange to you when you first started working with us?", "/dɪd ɪt fiːl streɪndʒ tə juː wen juː fɜːrst ˈstɑːrtɪd ˈwɜːrkɪŋ wɪθ ʌs/", "(Did it fíil strêindj tu iu uén iu fârst stár-ted uâr-quin uídh âs?)", "Isso pareceu estranho para você quando começou a trabalhar conosco?", "<strong>Start + ING ou TO:</strong> O verbo <em>start</em> aceita tanto <em>started working</em> quanto <em>started to work</em>."],
+                    [73, "BR", "A little bit! At first, when someone went straight to the point, I thought they were upset with me.", "/ə ˈlɪtl bɪt | æt fɜːrst wen ˈsʌmwʌn went streɪt tə ðə pɔɪnt | aɪ θɔːt ðeɪ wɜːr ʌpˈset wɪθ miː/", "(A lí-rôl bít! Ét fârst, uén sâm-uãn uênt strêit tu dhu póint, ai thót dhêi uâr âp-sét uídh mi)", "Um pouquinho! No começo, quando alguém ia direto ao ponto, eu achava que estava chateado comigo.", "<strong>Expressão:</strong> <em>'Go straight to the point'</em> (ou <em>cut to the chase</em>) = ir direto ao ponto, sem enrolação."],
+                    [74, "US", "Haha, don't ever <b>take it personally</b>! In American business culture, we just value brevity.", "/hɑːhɑː doʊnt ˈevər teɪk ɪt ˈpɜːrsənəli | ɪn əˈmerɪkən ˈbɪznəs ˈkʌltʃər wiː dʒʌst ˈvæljuː ˈbrevəti/", "(Rá-rá, dôunt é-ver têic it pâr-so-na-li! In A-mé-ri-can bíz-nes câl-tcher, uí djâst vé-liu bré-vi-ti)", "Haha, jamais leve para o lado pessoal! Na cultura de negócios americana, nós apenas valorizamos a brevidade/objetividade.", "<strong>Bloco da Aula do TAKE:</strong> <em>'Don't ever take it personally!'</em> = Nunca leve para o lado pessoal!"],
+                    [75, "BR", "Once I understood that cultural difference, my day-to-day routine became much smoother.", "/wʌns aɪ ˌʌndərˈstʊd ðæt ˈkʌltʃərəl ˈdɪfrəns | maɪ deɪ tə deɪ ruːˈtiːn bɪˈkeɪm mʌtʃ ˈsmuːðər/", "(Uâns ai ân-der-stúd dhét câl-tchu-rôl dí-frens, mai dêi-tu-dêi ru-tíin bi-quêim mâtch smú-dher)", "Assim que eu entendi essa diferença cultural, minha rotina do dia a dia ficou muito mais tranquila/fluida.", "<strong>Conectivo Temporal:</strong> <em>'Once'</em> no início da frase significa 'Uma vez que / A partir do momento em que'."],
+                    [76, "US", "And honestly, Lucas, you have <b>fitted in</b> with the team better than anyone else!", "/ænd ˈɑːnɪstli ˈluːkəs | juː hæv ˈfɪtɪd ɪn wɪθ ðə tiːm ˈbetər ðæn ˈeniwʌn els/", "(Énd ó-nest-li, Lú-cas, iu rév fí-ted in uídh dhu tíim bé-ter dhén ê-ni-uãn éls!)", "E sinceramente, Lucas, você se encaixou (adaptou) na equipe melhor do que qualquer outra pessoa!", "<strong>Phrasal Verb:</strong> <strong>Fit in</strong> significa integrar-se bem, encaixar-se num grupo ou ambiente de trabalho."],
+                    [77, "BR", "Thanks to you guys! Whenever I had a doubt, you never hesitated to explain.", "/θæŋks tə juː ɡaɪz | wenˈevər aɪ hæd ə daʊt | juː ˈnevər ˈhezɪteɪtɪd tuː ɪkˈspleɪn/", "(Thénks tu iu gáiz! Uén-é-ver ai réd a dáut, iu né-ver ré-zi-têi-ted tu ecs-plêin)", "Graças a vocês! Sempre que eu tinha uma dúvida, vocês nunca hesitavam em explicar.", "<strong>Thanks vs. Thank you:</strong> Quando seguido da preposição <em>to</em> ('Graças a...'), usamos sempre com S: <strong>Thanks to you</strong>!"],
+                    [78, "US", "That's what coworkers are for! It's always better to ask twice than to do a task wrong.", "/ðæts wʌt ˈkoʊwɜːrkərz ɑːr fɔːr | ɪts ˈɔːlweɪz ˈbetər tuː æsk twaɪs ðæn tə duː ə tæsk rɔːŋ/", "(Dhéts uót côu-uâr-quers ar fór! Its óu-ueis bé-ter tu ésc tuáis dhén tu dú a tésc róng)", "É para isso que servem os colegas de trabalho! É sempre melhor perguntar duas vezes do que fazer uma tarefa errado.", "<strong>Estrutura Idiomática:</strong> <em>'That's what friends/coworkers are for!'</em> = É para isso que servem os amigos/colegas!"],
+                    [79, "BR", "Speaking of tasks, did the warehouse team <b>finish</b> packing the afternoon shipments?", "/ˈspiːkɪŋ əv tæsks | dɪd ðə ˈwerhaʊs tiːm ˈfɪnɪʃ ˈpækɪŋ ði ˌæftərˈnuːn ˈʃɪpmənts/", "(Spíi-quin óv téscs, did dhu uér-ráus tíim fí-nix pé-quin dhi éf-ter-núun xíp-ments?)", "Falando em tarefas, a equipe do galpão/depósito terminou de embalar as remessas da tarde?", "<strong>Vocabulário de Logística:</strong> <em>'Warehouse'</em> = galpão de logística / depósito; <em>'shipments'</em> = remessas/cargas."],
+                    [80, "US", "They're almost done. They just need you to sign off on the packing slip at 2 PM.", "/ðer ˈɔːlmoʊst dʌn | ðeɪ dʒʌst niːd juː tə saɪn ɔːf ɑːn ðə ˈpækɪŋ slɪp æt tuː piː em/", "(Dhér óu-môust dân. Dhêi djâst níid iu tu sáin óf ón dhu pé-quin slíp ét tú píi-ém)", "Eles estão quase terminando. Só precisam que você dê o visto (assine aprovando) na guia de remessa às 14h.", "<strong>Phrasal Verb Corporativo:</strong> <strong>Sign off on something</strong> = dar a aprovação formal / assinar liberando um documento."],
+                    [81, "BR", "I'll set an alarm on my phone so I don't miss the pickup truck at 2:30 PM.", "/aɪl set ən əˈlɑːrm ɑːn maɪ foʊn soʊ aɪ doʊnt mɪs ðə ˈpɪkʌp trʌk æt tuː ˈθɜːrti piː em/", "(Áil sét ãn a-lárm ón mai fôun sôu ai dôunt mís dhu píc-âp trâc ét tú thâr-ti píi-ém)", "Vou colocar um alarme no meu celular para não perder o caminhão de coleta às 14h30.", "<strong>Miss vs. Lose:</strong> Para perder horário, transporte, voo ou coleta, usamos sempre <strong>MISS</strong> (nunca <em>lose</em>!)."],
+                    [82, "US", "Good call! The driver has been arriving right on schedule every day this week.", "/ɡʊd kɔːl | ðə ˈdraɪvər hæz bɪn əˈraɪvɪŋ raɪt ɑːn ˈskedʒuːl ˈevri deɪ ðɪs wiːk/", "(Gúd cól! Dhu drái-ver réz bín a-rái-vin ráit ón ské-djul é-vri dêi dhis uíic)", "Boa ideia (Boa decisão)! O motorista tem chegado rigorosamente no horário todos os dias nesta semana.", "<strong>Expressão Natural:</strong> <em>'Good call!'</em> no trabalho significa 'Boa decisão! / Bem pensado!'. E <em>'on schedule'</em> = dentro do cronograma."],
+                    [83, "BR", "If anything unexpected <b>comes up</b>, I have the logistics supervisor's extension.", "/ɪf ˈeniθɪŋ ˌʌnɪkˈspektɪd kʌmz ʌp | aɪ hæv ðə ləˈdʒɪstɪks ˈsuːpərvaɪzərz ɪkˈstenʃn/", "(If ê-ni-thin ân-ecs-péc-ted câmz âp, ai rév dhu lo-djís-tics sú-per-vái-zors ecs-tên-xãn)", "Se surgir qualquer imprevisto, eu tenho o ramal do supervisor de logística.", "<strong>Phrasal Verb & Vocabulário:</strong> <strong>Come up</strong> = surgir de repente (um problema/imprevisto); <em>'extension'</em> = ramal telefônico."],
+                    [84, "US", "You have everything under control! I don't even need to worry when you're on duty.", "/juː hæv ˈevriθɪŋ ˈʌndər kənˈtroʊl | aɪ doʊnt ˈiːvən niːd tə ˈwɜːri wen jʊr ɑːn ˈduːti/", "(Iu rév é-vri-thin ân-der con-trôul! Ai dôunt í-ven níid tu uâ-ri uén iúr ón dú-ri)", "Você tem tudo sob controle! Eu nem preciso me preocupar quando você está de plantão (em serviço).", "<strong>Expressão de Turno:</strong> <strong>On duty</strong> = em serviço / de plantão; <strong>Off duty</strong> = fora de serviço / de folga."]
+                ]
+            },
+            {
+                actId: 5,
+                title: "Ato 5: Evolução Profissional, Feedback e Fim do Turno do Colega (Nível Avançado – Falas #85 a #104)",
+                items: [
+                    [85, "BR", "By the way, Mark, did Sarah mention anything about the upcoming <b>performance reviews</b>?", "/baɪ ðə weɪ mɑːrk | dɪd ˈserə ˈmenʃn ˈeniθɪŋ əˈbaʊt ði ˈʌpkʌmɪŋ pərˈfɔːrməns rɪˈvjuːz/", "(Bái dhu uêi, Márc, did Sé-ra mên-xãn ê-ni-thin a-báut dhi âp-câ-min per-fór-mans ri-viúz?)", "A propósito, Mark, a Sarah mencionou algo sobre as próximas avaliações de desempenho?", "<strong>Vocabulário de RH:</strong> <em>'Upcoming'</em> = que está por vir/próximo; <em>'performance review'</em> = avaliação de desempenho."],
+                    [86, "US", "She did! Actually, she praised your work ethic during yesterday's staff meeting.", "/ʃiː dɪd | ˈæktʃuəli ʃiː preɪzd jɔːr wɜːrk ˈeθɪk ˈdʊrɪŋ ˈjestərdeɪz stæf ˈmiːtɪŋ/", "(Xíi díd! Éc-tchu-a-li, xíi prêizd iór uârk é-thic dú-rin iés-ter-dêiz stéf míi-tin)", "Mencionou sim! Na verdade, ela elogiou a sua ética de trabalho durante a reunião de equipe de ontem.", "<strong>Verbo importante:</strong> <em>'Praise'</em> (/preɪz/) significa 'elogiar / enaltecer'. E lembre-se: <em>actually</em> = na verdade!"],
+                    [87, "BR", "Seriously?! That means a lot to me! Six months ago, I was <b>terrified</b> of answering the phone in English.", "/ˈsɪriəsli | ðæt miːnz ə lɑːt tə miː | sɪks mʌnθs əˈɡoʊ aɪ wəz ˈterɪfaɪd əv ˈænsərɪŋ ðə foʊn ɪn ˈɪŋɡlɪʃ/", "(Sí-ri-as-li?! Dhét míinz a lót tu mi! Sícs mânths a-gôu, ai uóz té-ri-fáid óv én-se-rin dhu fôun in Ín-glix)", "Sério?! Isso significa muito para mim! Seis meses atrás, eu morria de medo de atender o telefone em inglês.", "<strong>Pronúncia de 'Answering':</strong> A letra <strong>W</strong> em <em>answer / answering</em> é 100% muda! Diga <em>'én-se-rin'</em>."],
+                    [88, "US", "Look how far you've come! Now you handle phone calls with clients effortlessly.", "/lʊk haʊ fɑːr juːv kʌm | naʊ juː ˈhændl foʊn kɔːlz wɪθ ˈklaɪənts ˈefərtləsli/", "(Lúc ráu fár iúuv câm! Náu iu rén-dôl fôun cólz uídh clái-ents é-fort-les-li)", "Olhe o quão longe você chegou (o quanto evoluiu)! Agora você lida com ligações de clientes sem esforço.", "<strong>Frase Motivacional:</strong> <em>'Look how far you've come!'</em> = Veja o quanto você já evoluiu / progrediu!"],
+                    [89, "BR", "If you hadn't been so patient with me during my first month, I <b>would have struggled</b> much more.", "/ɪf juː ˈhædnt bɪn soʊ ˈpeɪʃnt wɪθ miː ˈdʊrɪŋ maɪ fɜːrst mʌnθ | aɪ wʊd həv ˈstrʌɡld mʌtʃ mɔːr/", "(If iu ré-dânt bín sôu pêi-xent uídh mi dú-rin mai fârst mânth, ai uúd rév strâ-gôld mâtch mór)", "Se você não tivesse sido tão paciente comigo durante o meu primeiro mês, eu teria tido muito mais dificuldade.", "<strong>3rd Conditional Completa:</strong> <em>'If you hadn't been... I would have struggled'</em> (agradecimento avançado sobre o passado)."],
+                    [90, "US", "Don't mention it! You put in the hard work and practiced every single shift.", "/doʊnt ˈmenʃn ɪt | juː pʊt ɪn ðə hɑːrd wɜːrk ænd ˈpræktɪst ˈevri ˈsɪŋɡl ʃɪft/", "(Dôunt mên-xãn it! Iu pút in dhu rárd uârk énd préc-tist é-vri sín-gôl xíft)", "Não há de quê (Nem mencione isso)! Você se dedicou pesado e praticou em absolutamente todos os turnos.", "<strong>Phrasal Verb:</strong> <em>'Put in hard work / put in effort'</em> = dedicar esforço/trabalho duro em algo."],
+                    [91, "BR", "What helped me the most was learning workplace expressions as <b>complete blocks</b> instead of translating.", "/wʌt helpt miː ðə moʊst wəz ˈlɜːrnɪŋ ˈwɜːrkpleɪs ɪkˈspreʃnz æz kəmˈpliːt blɑːks ɪnˈsted əv trænsˈleɪtɪŋ/", "(Uót rélpt mi dhu môust uóz lâr-nin uârk-plêis ecs-pré-xãnz éz com-plíit blócs ins-téd óv tréins-lêi-tin)", "O que mais me ajudou foi aprender as expressões do trabalho como blocos completos em vez de ficar traduzindo.", "<strong>Metodologia na Prática:</strong> No trabalho, você não tem tempo para traduzir palavra por palavra; os blocos prontos salvam a comunicação!"],
+                    [92, "US", "That's the secret! In a fast-paced workplace, you just react to the situation naturally.", "/ðæts ðə ˈsiːkrət | ɪn ə ˈfæst peɪst ˈwɜːrkpleɪs juː dʒʌst riˈækt tə ðə ˌsɪtʃuˈeɪʃn ˈnætʃrəli/", "(Dhéts dhu síi-cret! In a fést-pêist uârk-plêis, iu djâst ri-éct tu dhu sí-tchu-êi-xãn né-tchu-ra-li)", "Esse é o segredo! Em um ambiente de trabalho dinâmico, você apenas reage à situação naturalmente.", "<strong>Vocabulário:</strong> <em>'Workplace'</em> = local/ambiente de trabalho; <em>'fast-paced'</em> = de ritmo rápido/dinâmico."],
+                    [93, "BR", "I'm even thinking about <b>applying for</b> the assistant supervisor position next quarter.", "/aɪm ˈiːvən ˈθɪŋkɪŋ əˈbaʊt əˈplaɪɪŋ fɔːr ði əˈsɪstənt ˈsuːpərvaɪzər pəˈzɪʃn nekst ˈkwɔːrtər/", "(Aim í-ven thín-quin a-báut a-plái-in fór dhi a-sís-tent sú-per-vái-zor po-zí-xãn nécst quór-ter)", "Estou até pensando em me candidatar à vaga de supervisor assistente no próximo trimestre.", "<strong>Collocation de Carreira:</strong> Candidatar-se a uma vaga de emprego ou promoção é sempre <strong>apply FOR a job / position</strong>."],
+                    [94, "US", "You should definitely go for it! I'm 100% sure Sarah will back you up.", "/juː ʃʊd ˈdefɪnətli ɡoʊ fɔːr ɪt | aɪm wʌn ˈhʌndrəd pərˈsent ʃʊr ˈserə wɪl bæk juː ʌp/", "(Iu xúd dé-fi-net-li gôu fór it! Aim uãn rân-dred per-sênt xúr Sé-ra uíl béc iu âp)", "Você com certeza deveria ir em frente (tentar)! Tenho 100% de certeza de que a Sarah vai te apoiar.", "<strong>Dupla de Ouro:</strong> <em>'Go for it!'</em> = Vá em frente / Se joga!; <em>'Back someone up'</em> = dar apoio / respaldar alguém."],
+                    [95, "BR", "Thanks for the encouragement, Mark! Now, is there anything else before we <b>wrap up</b>?", "/θæŋks fɔːr ði ɪnˈkɜːrɪdʒmənt mɑːrk | naʊ ɪz ðer ˈeniθɪŋ els bɪˈfɔːr wiː ræp ʌp/", "(Thénks fór dhi in-câ-ridj-ment, Márc! Náu, iz dhér ê-ni-thin éls bi-fór uí rép âp?)", "Obrigado pelo incentivo, Mark! Agora, há mais alguma coisa antes de encerrarmos (concluirmos)?", "<strong>Phrasal Verb Essencial de Reunião:</strong> <strong>Wrap up</strong> (/ræp ʌp/ - o W é mudo!) significa 'encerrar / finalizar' uma conversa ou turno."],
+                    [96, "US", "Nope, that covers everything! The desk is all yours now.", "/noʊp ðæt ˈkʌvərz ˈevriθɪŋ | ðə desk ɪz ɔːl jɔːrz naʊ/", "(Nôup, dhét câ-verz é-vri-thin! Dhu désk iz ól iórz náu)", "Não, isso cobre tudo! A mesa é toda sua agora.", "<strong>Fala cotidiana:</strong> <em>'Nope'</em> é um jeito informal e amigável de dizer <em>'No'</em>. E <em>'It's all yours'</em> = É todo seu!"],
+                    [97, "BR", "Awesome! I've already logged into my account and opened the pending tickets.", "/ˈɔːsəm | aɪv ɔːlˈredi lɔːɡd ˈɪntuː maɪ əˈkaʊnt ænd ˈoʊpənd ðə ˈpendɪŋ ˈtɪkɪts/", "(Ó-sâm! Áiv óu-ré-di lógd ín-tu mai a-cáunt énd ôu-pend dhu pên-din tí-quets)", "Excelente! Eu já entrei na minha conta e abri os chamados pendentes.", "<strong>Present Perfect de Transição:</strong> Mostra que Lucas já está 100% no comando da estação de trabalho."],
+                    [98, "US", "Great! I'm going to grab my jacket from the locker and <b>clock out</b>.", "/ɡreɪt | aɪm ˈɡoʊɪŋ tə ɡræb maɪ ˈdʒækɪt frʌm ðə ˈlɑːkər ænd klɑːk aʊt/", "(Grêit! Aim gôu-in tu gréb mai djé-quet frâm dhu ló-quer énd clóc áut)", "Ótimo! Vou pegar minha jaqueta no armário e bater o ponto de saída.", "<strong>Contraste Perfeito:</strong> Você <strong>clocks IN</strong> quando entra no turno e <strong>clocks OUT</strong> quando encerra o expediente!"],
+                    [99, "BR", "If any question comes up about the morning invoices, can I <b>text you</b>?", "/ɪf ˈeni ˈkwestʃən kʌmz ʌp əˈbaʊt ðə ˈmɔːrnɪŋ ˈɪnvɔɪsɪz | kæn aɪ tekst juː/", "(If ê-ni qués-tchãn câmz âp a-báut dhu mór-nin ín-vói-siz, quén ai técst iu?)", "Se surgir alguma dúvida sobre as notas fiscais da manhã, posso te mandar uma mensagem?", "<strong>Verbo moderno:</strong> <em>'Can I text you?'</em> = Posso te mandar mensagem no celular/WhatsApp?"],
+                    [100, "US", "Anytime! My phone will be on, so just shoot me a message if you need anything.", "/ˈenitaɪm | maɪ foʊn wɪl biː ɑːn | soʊ dʒʌst ʃuːt miː ə ˈmesɪdʒ ɪf juː niːd ˈeniθɪŋ/", "(Ê-ni-táim! Mai fôun uíl bí ón, sôu djâst xút mi a mé-sedj if iu níid ê-ni-thin)", "A qualquer hora! Meu celular estará ligado, então é só me mandar uma mensagem rápida se precisar de algo.", "<strong>Idiom Americano:</strong> <em>'Shoot me a message'</em> (ou <em>shoot me an email</em>) = mande uma mensagem rápida para mim!"],
+                    [101, "BR", "I appreciate it, Mark! Go enjoy your afternoon off and get some rest.", "/aɪ əˈpriːʃieɪt ɪt mɑːrk | ɡoʊ ɪnˈdʒɔɪ jɔːr ˌæftərˈnuːn ɔːf ænd ɡet sʌm rest/", "(Ai a-príi-xi-êit it, Márc! Gôu en-djói iór éf-ter-núun óf énd guét sâm rést)", "Eu agradeço muito, Mark! Vá curtir a sua tarde de folga e descanse um pouco.", "<strong>Agradecimento Profissional:</strong> <em>'I appreciate it!'</em> é uma das formas mais elegantes e naturais de agradecer no trabalho."],
+                    [102, "US", "Thanks, man! Don't work too hard, and good luck with Mrs. Robinson if she calls!", "/θæŋks mæn | doʊnt wɜːrk tuː hɑːrd | ænd ɡʊd lʌk wɪθ ˈmɪsɪz ˈrɑːbɪnsən ɪf ʃiː kɔːlz/", "(Thénks, mén! Dôunt uârk tú rárd, énd gúd lâc uídh Mí-siz Ró-bin-sãn if xíi cólz!)", "Valeu, cara! Não trabalhe duro demais, e boa sorte com a Sra. Robinson se ela ligar!", "<strong>Brincadeira de Colegas:</strong> <em>'Don't work too hard!'</em> é uma despedida super comum e bem-humorada ao sair do serviço."],
+                    [103, "BR", "Haha, I'll handle it! Drive safely on your way home and see you tomorrow morning!", "/hɑːhɑː aɪl ˈhændl ɪt | draɪv ˈseɪfli ɑːn jɔːr weɪ hoʊm ænd siː juː təˈmɑːroʊ ˈmɔːrnɪŋ/", "(Rá-rá, áil rén-dôl it! Dráiv sêif-li ón iór uêi rôum énd síi iu tu-mó-rou mór-nin!)", "Haha, eu dou conta disso! Dirija com segurança no caminho para casa e te vejo amanhã de manhã!", "<strong>Promessa de Confiança:</strong> <em>'I'll handle it!'</em> (ou <em>I'm on it!</em>) = Deixa comigo / Eu dou conta!"],
+                    [104, "US", "Have a smooth shift, Lucas! See you bright and early tomorrow. <b>Take it easy</b>!", "/hæv ə smuːð ʃɪft ˈluːkəs | siː juː braɪt ænd ˈɜːrli təˈmɑːroʊ | teɪk ɪt ˈiːzi/", "(Rév a smúdh xíft, Lú-cas! Síi iu bráit énd âr-li tu-mó-rou. Têic it í-zi!)", "Tenha um turno tranquilo, Lucas! Te vejo bem cedinho amanhã. Fique bem (Vá com calma)!", "<strong>Expressões Finais:</strong> <em>'Have a smooth shift'</em> = tenha um turno tranquilo; <em>'bright and early'</em> = bem cedinho!"]
+                ]
+            }
+        ];
+
+        // ============================================================================
+        // RENDERIZAÇÃO DAS 104 FALAS EM TABELAS ORGANIZADAS POR ATO
+        // ============================================================================
+        const container = document.getElementById('dialogue-container');
+        let htmlOutput = '';
+
+        dialogueActs.forEach(act => {
+            htmlOutput += `
+            <div class="act-block" id="act-${act.actId}">
+                <div class="act-header-bar">
+                    <h2 class="act-title">${act.title}</h2>
+                    <button class="play-act-btn" id="btn-act-${act.actId}" onclick="playEntireAct(${act.actId})">▶ Ouvir Este Ato Inteiro</button>
+                </div>
+                <div class="table-responsive-wrapper">
+                    <table class="dialogue-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 45%;">Profissional e Fala em Inglês (Áudio)</th>
+                                <th style="width: 55%;">Pronúncia (IPA + Simplificada), Tradução e Dica do Professor</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+
+            act.items.forEach(item => {
+                const num = item[0];
+                const speaker = item[1]; // "BR" ou "US"
+                const enHtml = item[2];
+                const ipa = item[3];
+                const phonetic = item[4];
+                const pt = item[5];
+                const tip = item[6];
+
+                const isBr = speaker === "BR";
+                const rowClass = isBr ? "row-br" : "row-us";
+                const badgeClass = isBr ? "speaker-br" : "speaker-us";
+                const speakerName = isBr ? "🇧🇷 Lucas (Assumindo o Turno)" : "🇺🇸 Mark (Colega Americano)";
+                const pitchVal = isBr ? 0.94 : 1.06;
+
+                const cleanAudioText = enHtml.replace(/<\/?b>/g, '').replace(/'/g, "\\'");
+
+                htmlOutput += `
+                            <tr class="dialogue-row ${rowClass}" data-search="${enHtml.toLowerCase()} ${pt.toLowerCase()} ${tip.toLowerCase()} ${act.title.toLowerCase()}">
+                                <td>
+                                    <div>
+                                        <span class="turn-num">#${num}</span>
+                                        <span class="speaker-tag ${badgeClass}">${speakerName}</span>
+                                    </div>
+                                    <span class="sentence-en">${enHtml}</span>
+                                    <button class="audio-btn-inline" onclick="playAudio('${cleanAudioText}', ${pitchVal})" title="Ouvir fala #${num}">🔊</button>
+                                </td>
+                                <td>
+                                    <span class="ipa-symbol">${ipa}</span>
+                                    <span class="character-portuguese-phonetics">${phonetic}</span>
+                                    <span class="details-translation">${pt}</span>
+                                    <span class="teacher-tip">💡 ${tip}</span>
+                                </td>
+                            </tr>`;
+            });
+
+            htmlOutput += `
+                        </tbody>
+                    </table>
+                </div>
+            </div>`;
+        });
+
+        container.innerHTML = htmlOutput;
+
+        // ============================================================================
+        // FILTRO DE PESQUISA EM TEMPO REAL NAS 104 FALAS
+        // ============================================================================
+        function filterDialogue() {
+            const query = document.getElementById('dialogueSearch').value.toLowerCase();
+            const actBlocks = document.querySelectorAll('.act-block');
+
+            actBlocks.forEach(block => {
+                const rows = block.querySelectorAll('.dialogue-row');
+                let visibleRows = 0;
+
+                rows.forEach(row => {
+                    const text = row.getAttribute('data-search');
+                    if (text.includes(query)) {
+                        row.style.display = '';
+                        visibleRows++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                block.style.display = visibleRows > 0 ? 'block' : 'none';
+            });
+        }
+
+        // ============================================================================
+        // SINTETIZADOR DE VOZ (INDIVIDUAL E SEQUENCIAL POR ATO)
+        // ============================================================================
+        let voices = [];
+        let isPlayingSequence = false;
+        let currentActPlaying = null;
+
+        function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+        loadVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function getBestEnglishVoice() {
+            if (voices.length === 0) loadVoices();
+            let targetVoice = voices.find(voice => 
+                (voice.name.includes('Google') || voice.name.includes('Premium') || voice.name.includes('Samantha')) 
+                && voice.lang.includes('en-US')
+            );
+            if (!targetVoice) targetVoice = voices.find(voice => voice.lang === 'en-US');
+            if (!targetVoice) targetVoice = voices.find(voice => voice.lang.startsWith('en'));
+            return targetVoice;
+        }
+
+        function playAudio(text, pitch = 1) {
+            stopSequence();
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 0.86;
+                utterance.pitch = pitch;
+
+                const targetVoice = getBestEnglishVoice();
+                if (targetVoice) {
+                    utterance.voice = targetVoice;
+                    utterance.lang = targetVoice.lang;
+                } else {
+                    utterance.lang = 'en-US';
+                }
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function stopSequence() {
+            isPlayingSequence = false;
+            if (currentActPlaying !== null) {
+                const btn = document.getElementById(`btn-act-${currentActPlaying}`);
+                if (btn) {
+                    btn.textContent = "▶ Ouvir Este Ato Inteiro";
+                    btn.classList.remove('stop');
+                }
+                currentActPlaying = null;
+            }
+        }
+
+        function playEntireAct(actId) {
+            if (isPlayingSequence && currentActPlaying === actId) {
+                window.speechSynthesis.cancel();
+                stopSequence();
+                return;
+            }
+
+            window.speechSynthesis.cancel();
+            stopSequence();
+
+            const actObj = dialogueActs.find(a => a.actId === actId);
+            if (!actObj) return;
+
+            isPlayingSequence = true;
+            currentActPlaying = actId;
+            const btn = document.getElementById(`btn-act-${actId}`);
+            if (btn) {
+                btn.textContent = "⏹ Parar Áudio do Ato";
+                btn.classList.add('stop');
+            }
+
+            let index = 0;
+            function speakNext() {
+                if (!isPlayingSequence || index >= actObj.items.length) {
+                    stopSequence();
+                    return;
+                }
+                const item = actObj.items[index];
+                const isBr = item[1] === "BR";
+                const cleanText = item[2].replace(/<\/?b>/g, '');
+                const utterance = new SpeechSynthesisUtterance(cleanText);
+                utterance.rate = 0.86;
+                utterance.pitch = isBr ? 0.94 : 1.06;
+
+                const targetVoice = getBestEnglishVoice();
+                if (targetVoice) {
+                    utterance.voice = targetVoice;
+                    utterance.lang = targetVoice.lang;
+                } else {
+                    utterance.lang = 'en-US';
+                }
+
+                utterance.onend = () => {
+                    index++;
+                    if (isPlayingSequence) {
+                        setTimeout(speakNext, 450);
+                    }
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+
+            speakNext();
+        }
+    </script>
+</body>
+</html>
